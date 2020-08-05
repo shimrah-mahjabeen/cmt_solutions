@@ -26,6 +26,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'httparty', '~> 0.18.1'
 gem 'jquery-rails', '~> 4.4'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
