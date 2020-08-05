@@ -7,4 +7,8 @@ class Provider < ApplicationRecord
   has_many :endpoints
 
   accepts_nested_attributes_for :addresses, :identifiers, :taxonomies, :other_names, :practice_locations, :endpoints
+
+  def full_name
+    [basic['name_prefix'], basic['first_name'], basic['middle_name'], basic['last_name']].compact.join(' ').strip
+  end
 end
