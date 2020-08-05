@@ -39,9 +39,7 @@
           <td><%= provider.basic['enumeration_date'] %></td>
           <td><%= provider.basic['last_updated'] %></td>
           <td>
-            <button class='btn btn-defualt'>
-              <%= link_to 'show', provider_path(provider) %>
-            </button>
+              <%= link_to 'show', provider_path(provider), class: 'btn btn-info' %>
           </td>
         </tr>
       <% end %>
@@ -50,5 +48,5 @@
 
   <%= will_paginate @providers, renderer: BootstrapPagination::Rails %>
 
-  <%= link_to 'See Top Searched NPI', top_searched_npis_providers_path %>
+  <%= link_to 'See Top Searched NPI', top_searched_npis_providers_path, class: 'pull-right' %>
 </div>
